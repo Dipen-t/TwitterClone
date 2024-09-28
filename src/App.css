@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header {
+  display: flex;
+  justify-content: flex-end; /* Pushes content to the right */
+  align-items: center;
+  width: 35%;
+  background-color: black;
+  border: rgba(255, 255, 255, 0.247) solid 1px;
+}
+
+.sideBar {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 80px;
+}
+
+.Logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  filter: invert(1);
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+}
+.listItem {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 6px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.089);
+  }
+}
+.PostBtn {
+  width: 250px;
+  background-color: rgb(115, 115, 245);
+  color: white;
+  padding: 12px 50px;
+  margin: 12px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: rgb(115, 115, 245);
+  }
+}
+.ProfileBar {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  align-items: center; /* Vertically center items */
+  justify-content: flex-start; /* Align everything to the left */
+}
+
+.dpcont {
+  display: flex;
+  align-items: center;
+  margin-right: 5px; /* Reduced gap between the image and text */
+}
+
+.dp {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 3px;
+}
+
+.At {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.438);
+  margin-left: 5px; /* Reduced gap between the name and the website */
+}
+
+.ThreeDots {
+  width: 25px;
+  height: 25px;
+  filter: invert(1);
+  margin-left: 10px; /* Small gap between profile info and the three dots */
+}
+.middle-container {
+  min-height: 100vh;
+  width: 35%;
+  min-height: 100vh;
+  position: absolute;
+  left: 36%;
+  /* margin-left: 300px; */
+}
+/* Main root container that contains header, sidebar, and middle container */
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /* Align items in row */
+  align-items: flex-start; /* Top align all elements */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width of the page */
+}
+
+/* Header section styling */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 35%; /* Take up 20% of the width */
+  background-color: black;
+  border: rgba(255, 255, 255, 0.247) solid 1px; /* Full height */
+}
+
+/* Sidebar section styling */
+.sideBar {
+  width: 35%; /* Sidebar width */
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+}
+
+/* Middle content container */
+  .middle-container {
+    flex-grow: 1; /* This will make the middle container take the remaining space */ /* Optional: Set a background for visibility */ /* Padding for content */
+    min-height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 36%;
+    border-right: rgba(255, 255, 255, 0.247)  solid 1px;
+  }
+  .midHead {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    align-items: center;
+    color: white;
+    padding: 24px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+    position: fixed;
+  }
+  .midHead span {
+    cursor: pointer;
+    color: white;
+    border-radius: 30px;
+    padding: 6px;
+  }
+.upload{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 50px;
+  margin-top: 20px;
+  flex-direction: row;
+ /* Align everything to the left */     
+}
+.tweet{
+height: 60px;
+background-color:black;
+color: white;
+}
+.write{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  gap: 10px;
+  padding: 20px;
+  margin: 20px;
+  flex-direction: row;
+   /* Align everything to the left */
+}
+input{
+  margin-left: 50px;
+  border: none;
+}
+input:focus{ 
+  outline: none;
+  border: none;
+
+}
+.World{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  filter: invert(1);
+}
