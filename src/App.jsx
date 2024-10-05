@@ -1,17 +1,25 @@
-
-import './App.css'
-import Header from './Components/Header'
-import Middle from './Components/Middle'
-import Right from './Components/Right'
+import { useState } from 'react'
+import Layout from './Components/Layout'
+import Login from './Components/Login'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  const handleLogin = (username, password) => {
+    if (username === 'admin' && password === 'admin') {
+      setIsLoggedIn(true)
+    } else {
+      alert('Invalid credentials. Please use "admin" for both username and password.')
+    }
+  }
+
   return (
-    <div className="root">
-      <Header />
-      <div className="main-content">
-        <Middle />
-        <Right />
-      </div>
+    <div>
+      {!isLoggedIn ? (
+        <Login onLogin={handleLogin} />
+      ) : (
+        <Layout />
+      )}
     </div>
   )
 }

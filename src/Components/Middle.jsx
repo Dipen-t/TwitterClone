@@ -8,11 +8,22 @@ import {
   MapPin,
 } from "lucide-react";
 import TweetList from "./TweetList";
-
+import ClientTweets from "./ClientTweets";
 
 export default function Middle() {
   const [value, setValue] = React.useState("");
-  const[list,setList]=React.useState([]);
+  const [list, setList] = React.useState([]);
+
+  const handlePost = () => {
+    if (value.trim()) {
+      const newTweet = {
+        id: Date.now(),
+        text: value,
+      };
+      setList([newTweet, ...list]);
+      setValue("");
+    }
+  };
 
   return (
     <div className="middle-container">
@@ -48,15 +59,20 @@ export default function Middle() {
             <Calendar size={20} />
             <MapPin size={20} />
           </div>
-          <button className="post-button" disabled={!value.trim()}>
+          <button
+            className="post-button"
+            onClick={handlePost}
+            disabled={!value.trim()}
+          >
             Post
           </button>
         </div>
       </div>
       <div className="show-posts">
-        <span>Show 45 posts</span>
+        <span>Show {list.length} posts</span>
       </div>
-      <TweetList />
+      <ClientTweets tweets={list} />
+      <TweetList tweets={list} />
     </div>
   );
 }

@@ -36,6 +36,7 @@ body {
   justify-content: space-between;
   height: 100vh;
   padding: 0 12px;
+  transition: width 0.3s ease-in-out;
 }
 
 .Logo {
@@ -68,6 +69,15 @@ body {
 
 .listItem:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.listItem svg {
+  margin-right: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.listItem:hover svg {
+  transform: scale(1.1);
 }
 
 .PostBtn {
@@ -187,7 +197,7 @@ body {
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   padding: 12px 0;
   outline: none;
 }
@@ -196,18 +206,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
-  padding-left: 48px;
+  margin-top: 100px;
 }
 
 .tweet-icons {
   display: flex;
-  gap: 16px;
+  gap: 20px;
 }
 
 .tweet-icons svg {
   color: rgb(29, 155, 240);
   cursor: pointer;
+  transition: color 0.2s ease-in-out;
 }
 
 .post-button {
@@ -220,6 +230,7 @@ body {
   font-size: 15px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+  margin-left: 4px;
 }
 
 .post-button:hover {
@@ -407,4 +418,55 @@ body {
   margin-left: auto;
 }
 
+.tweet-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
 
+.tweet-image, .tweet-video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.no-media {
+  color: gray;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .sideBar {
+    width: 80px;
+  }
+
+  .sideBar .listItem span {
+    display: none;
+  }
+
+  .sideBar .listItem {
+    justify-content: center;
+  }
+
+  .sideBar .listItem svg {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+
+.name{
+  display: none;
+}
+  .right-container {
+    display: none;
+  }
+
+  .middle-container {
+    max-width: 100%;
+  }
+
+  .sideBar {
+    width: 80px;
+  }
+
+}
